@@ -35,19 +35,19 @@ View the Metrics screen [here](http://fibserver.cfapps.io/#/metrics).
 
 ## Developer Documentation
 ### Install Prerequisites
-This was done on OSX 10.8.2.
+These instructions apply to OSX 10.8.2.
 
-Install Java from the Oracle website.
-Install Maven
-Install Git if not already installed
-Install Node.js from https://nodejs.org/
-Install Yeoman: sudo npm install -g yo
-Install Bower: sudo npm install -g bower
-Install Grunt: sudo npm install -g grunt-cli 
-Install JHipster: sudo npm install -g generator-jhipster
-Check out the project : git ...
-`mvn spring-boot:run or run src/main/java/com.mycompany.myapp.Application.java` in your IDE
-browse to http://localhost:8080
+1. Install Java from the Oracle website.
+1. Install Maven
+1. Install Git if not already installed
+1. Install Node.js from https://nodejs.org/
+1. Install Yeoman: `sudo npm install -g yo`
+1. Install Bower: `sudo npm install -g bower`
+1. Install Grunt: `sudo npm install -g grunt-cli`
+1. Install JHipster: `sudo npm install -g generator-jhipster`
+1. Check out the project : `git clone https://github.com/lucrussell/fibserver`
+1. Run `mvn spring-boot:run` (or run src/main/java/com.mycompany.myapp.Application.java` in your IDE)
+1. Browse to http://localhost:8080
 
 ### How to Build the Application
 
