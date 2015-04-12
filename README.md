@@ -51,13 +51,24 @@ These instructions apply to OSX 10.8.2.
 
 ### How to Build the Application
 
+### Development Notes
+
+I've picked out a few key parts of the application below.
+
+* [FibonacciServiceTest.java](https://github.com/lucrussell/fibserver/blob/8b0619b9c004f48bd8171efae074186992621ebf/src/test/java/com/mycompany/myapp/service/FibonacciServiceTest.java): Unit test for the FibonacciService.
+* [FibonacciService.java](https://github.com/lucrussell/fibserver/blob/master/src/main/java/com/mycompany/myapp/service/FibonacciService.java): This contains the business logic for the calculation. 
+* [FibonacciResource](https://github.com/lucrussell/fibserver/blob/master/src/main/java/com/mycompany/myapp/web/rest/FibonacciResource.java): Exposes the service to POST requests.
+* [main.controller.js](https://github.com/lucrussell/fibserver/blob/master/src/main/webapp/scripts/app/main/main.controller.js): AngularJS file for calling the REST service.
+
 ### How To Run The Tests
+You can run `mvn:test` on the command line, or run all the tests under `src/main/test` in your IDE.
+
 
 ### How To Deploy to Cloud Foundry
-Create an account on Pivotal Cloud Foundry 
-Install the cf CLI [here](http://docs.cloudfoundry.org/devguide/installcf/install-go-cli.html)
-Run `yo jhipster:cloudfoundry`
+1. Create an account on Pivotal Cloud Foundry 
+1. Install the cf CLI [here](http://docs.cloudfoundry.org/devguide/installcf/install-go-cli.html)
+1. Run `yo jhipster:cloudfoundry`
 
 ## Troubleshooting
-Ensure grunt tests can run by setting up PHANTOMJS_BIN env var
+Grunt tests might faile. Ensure they can run by setting up PHANTOMJS_BIN env var
 http://stackoverflow.com/questions/28336214/no-binary-for-phantomjs-browser-on-your-platform-please-set-phantomjs-bin-en
