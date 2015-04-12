@@ -1,18 +1,24 @@
 README for fibserver
 ====================
 
-See [fibserver/wiki](https://github.com/lucrussell/fibserver/wiki) for background on this project.
+See the [wiki](https://github.com/lucrussell/fibserver/wiki) for background on this project.
 
 ## Introduction
-fibserver is a simple REST server for calculating fibonacci sequences. It also comes with a front end to demonstrate calling the REST server. In addition, there are monitoring and maintenance screens. At the time of writing, there is an instance deployed [here](http://fibserver.cfapps.io/#/).
+fibserver is a simple REST server implemented with [Spring](http://spring.io/guides/gs/rest-service/), for calculating fibonacci sequences. It also comes with an [AngularJS](http://angularjs.org) front end to demonstrate calling the REST server. It's all glued together with [JHipster](https://jhipster.github.io/tech_stack.html), which provides monitoring and maintenance screens and other features.
+
+At the time of writing, there is an instance deployed [here](http://fibserver.cfapps.io/#/).
 
 ## Support Documentation
+The front end for the application looks like this:
+![alt text](https://github.com/lucrussell/fibserver/blob/master/doc-images/home.png)
+Type a number between 0 and 200 in the input to print out a fibonacci sequence.
 
-
+See it in action [here](http://fibserver.cfapps.io).
 ### How To See Health Checks
-You can see health checks for a running instance of the server.
+An authenticated user can see health checks for a running instance of the server.
 ![alt text](https://github.com/lucrussell/fibserver/blob/master/doc-images/health.png)
-Go to [Health](http://fibserver.cfapps.io/#/health) to check the status of the database, email server and disk space.
+See the health checks [here](http://fibserver.cfapps.io/#/health).
+
 
 ### How To Check Metrics
 Go to http://fibserver.cfapps.io/#/metrics
