@@ -1,6 +1,6 @@
 {
     "main": {
-        "title": "Welcome!",
+        "title": "Fibonacci Sequence Calculator",
         "subtitle": "",
         "logged": {
             "message": "You are logged in as user \"{{username}}\"."

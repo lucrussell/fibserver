@@ -25,8 +25,11 @@
                 <button type="submit" class="btn btn-primary" ng-click="login()" translate="login.form.button">Authenticate</button>
             </form>
             <p></p>
+            <div class="alert alert-warning" ng-switch-when="false" translate="global.messages.info.authenticated">
+                
+            </div>
             <div class="alert alert-warning" translate="global.messages.info.register">
-                You don't have an account yet? <a href=\"#/register\">Register a new account</a>
+                Default login="admin" and password="admin".
             </div>
         </div>
     </div>
