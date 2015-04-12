@@ -53,7 +53,7 @@ These instructions apply to OSX 10.8.2.
 
 ### Development Notes
 
-I've picked out a few key parts of the application below.
+Here are a few key parts of the application:
 
 * [FibonacciServiceTest.java](https://github.com/lucrussell/fibserver/blob/8b0619b9c004f48bd8171efae074186992621ebf/src/test/java/com/mycompany/myapp/service/FibonacciServiceTest.java): Unit test for the FibonacciService.
 * [FibonacciService.java](https://github.com/lucrussell/fibserver/blob/master/src/main/java/com/mycompany/myapp/service/FibonacciService.java): This contains the business logic for the calculation. 
