@@ -9,19 +9,21 @@ angular.module('fibserverApp')
         
         $scope.onChangeInput = function () {
         	var input = $scope.number;
-        	
-        	$scope.fibResult = [];
-        	$http.post("api/fibonacci", input[0])
+        	if(!isInt(input)){
+        		$scope.fibResult = '';
+        		return;
+        	}
+        	$http.post("api/fibonacci", input)
 	        	.success(function(data, status, headers, config) {
 	        		$scope.fibResult = data;
 	        	}).error(function(data, status, headers, config) {
 	        		$scope.status = status;
-	        		alert('error '+ data + status + headers + config);
+	        		$scope.fibResult = data.message || "Request failed";
         	});
-//        	FibService.findAll(input).then(function (data) {
-//        		$scope.fibResult = 9;
-//            });
-
         };
-        
+        function isInt(value) {
+    	  return !isNaN(value) && 
+    	         parseInt(Number(value)) == value && 
+    	         !isNaN(parseInt(value, 10));
+    	}
     });

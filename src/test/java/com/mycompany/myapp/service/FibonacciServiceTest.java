@@ -33,8 +33,13 @@ public class FibonacciServiceTest {
 	}
 	
 	@Test(expected=IllegalArgumentException.class)
-	public void testGetFibonacciSequenceReturnsErrorForIncorrectInput() {
+	public void testGetFibonacciSequenceReturnsErrorForNegativeInput() {
 		fibonacciService.getFibonacciSequence(-5);
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void testGetFibonacciSequenceReturnsErrorForTooLargeInput() {
+		fibonacciService.getFibonacciSequence(201);
 	}
 	
 	@Test

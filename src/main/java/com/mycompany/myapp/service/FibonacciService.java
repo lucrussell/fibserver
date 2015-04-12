@@ -17,9 +17,9 @@ import com.codahale.metrics.annotation.Timed;
  * A service for working with Fibonacci numbers. The public interface exposes
  * results as {@link BigInteger}s, which provides arbitrary-precision integers.
  * Because the Fibonacci function grows exponentially, 32-bit signed Java
- * integers can only hold the first 46 Fibonacci numbers. The Spring "prototype" scope
- * is used to ensure multiple requests get a new instance of the service and
- * aren't writing to the same memoization cache.
+ * integers can only hold the first 46 Fibonacci numbers. The Spring "prototype"
+ * scope is used to ensure multiple requests get a new instance of the service
+ * and aren't writing to the same memoization cache.
  *
  * @author lrussell
  */
@@ -29,15 +29,15 @@ import com.codahale.metrics.annotation.Timed;
 public class FibonacciService {
 
 	private final Logger log = LoggerFactory.getLogger(FibonacciService.class);
-	private ArrayList<BigInteger> fibCache; 
-
-	
+	private ArrayList<BigInteger> fibCache;
 
 	/**
 	 * Returns the whole Fibonacci sequence for the supplied input.
 	 * 
 	 * @param input
-	 *            must be greater than or equal to 0
+	 *            must be greater than or equal to 0, less than 200. The 200
+	 *            constraint is an arbitrary one to prevent overflowing the
+	 *            stack. This could be configurable as an enhancement.
 	 * @return The Fibonacci sequence for the supplied input
 	 */
 	@Timed
@@ -47,11 +47,14 @@ public class FibonacciService {
 		fibCache.add(BigInteger.ONE);
 		if (input < 0) {
 			throw new IllegalArgumentException("Illegal negative number specified as input");
+		} else if (input > 200) {
+			throw new IllegalArgumentException("Only supports inputs up to 200");
 		} else if (input == 0) {
 			List<BigInteger> zeroResult = new ArrayList<BigInteger>();
 			zeroResult.add(BigInteger.ZERO);
 			return zeroResult;
 		}
+
 		fib(input);
 		return fibCache;
 	}
