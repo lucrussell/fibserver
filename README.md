@@ -21,12 +21,17 @@ See the health checks [here](http://fibserver.cfapps.io/#/health).
 
 
 ### How To Check Metrics
-Go to http://fibserver.cfapps.io/#/metrics
-This will also show number of server errors, by http request
-++ How to Obtain Timings for a Web Service call
-(screenshot)
-It may be useful to check the performance statistics for services in production. You can check service time in milliseconds for getFibonacciSequence on the Metrics page, Services statistics section.
+An authenticated user can view metrics for a running instance of the server.
+![alt text](https://github.com/lucrussell/fibserver/blob/master/doc-images/metrics.png)
+View the Metrics screen [here](http://fibserver.cfapps.io/#/metrics).
 
+This will also show number of server errors by http request.
+
+### How to Obtain Timings for a Web Service Call
+It may be useful to check the performance statistics for services in production. Authenticated users can check service time in milliseconds for `getFibonacciSequence` on the Metrics page, Services Statistics section.
+
+![alt text](https://github.com/lucrussell/fibserver/blob/master/doc-images/statistics.png)
+View the Metrics screen [here](http://fibserver.cfapps.io/#/metrics).
 
 ## Developer Documentation
 ### Install Prerequisites
