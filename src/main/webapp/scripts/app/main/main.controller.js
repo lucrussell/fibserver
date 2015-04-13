@@ -9,10 +9,12 @@ angular.module('fibserverApp')
         
         $scope.onChangeInput = function () {
         	var input = $scope.number;
+        	$scope.fibResult = [];
         	if(!isInt(input)){
         		$scope.fibResult = '';
         		return;
         	}
+        	
         	$http.post("api/fibonacci", input)
 	        	.success(function(data, status, headers, config) {
 	        		$scope.fibResult = data;
