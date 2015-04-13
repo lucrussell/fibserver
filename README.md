@@ -63,6 +63,13 @@ These instructions apply to OSX 10.8.2.
 1. Install the cf CLI [here](http://docs.cloudfoundry.org/devguide/installcf/install-go-cli.html)
 1. Run `yo jhipster:cloudfoundry`
 
+### How To Manage the Application on Cloud Foundry
+The application is deployed to the EMC Pivotal Cloud Foundry where it can be managed, e.g. 
+* View the logs
+* Scale the application by adjusting number of instances
+* Adjust memory available to the instances
+
+![alt text](https://github.com/lucrussell/fibserver/blob/master/doc-images/cloudfoundry.png)
 
 ### Development Notes
 
@@ -72,12 +79,11 @@ Here are a few key parts of the application:
 * [FibonacciService.java](https://github.com/lucrussell/fibserver/blob/master/src/main/java/com/mycompany/myapp/service/FibonacciService.java): This contains the business logic for the calculation. 
 * [FibonacciResource](https://github.com/lucrussell/fibserver/blob/master/src/main/java/com/mycompany/myapp/web/rest/FibonacciResource.java): Exposes the service to POST requests with a REST API.
 * [main.controller.js](https://github.com/lucrussell/fibserver/blob/master/src/main/webapp/scripts/app/main/main.controller.js): AngularJS file backing main.html. Makes calls to the REST service.
-* [main.html](https://github.com/lucrussell/fibserver/blob/master/src/main/webapp/scripts/app/main/main.html)
+* [main.html](https://github.com/lucrussell/fibserver/blob/master/src/main/webapp/scripts/app/main/main.html): HTML page to interact with the service.
 
 ### How To Run The Tests
 You can run `mvn:test` on the command line, or run all the tests under `src/main/test` in your IDE.
 
 
 ## Troubleshooting
-Grunt tests might fail. Ensure they can run by setting up PHANTOMJS_BIN env var
-http://stackoverflow.com/questions/28336214/no-binary-for-phantomjs-browser-on-your-platform-please-set-phantomjs-bin-en
+Grunt tests might fail. Ensure they can run by setting up PHANTOMJS_BIN env var, see [here](http://stackoverflow.com/questions/28336214/no-binary-for-phantomjs-browser-on-your-platform-please-set-phantomjs-bin-en)
