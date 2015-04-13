@@ -63,7 +63,7 @@ These instructions apply to OSX 10.8.2.
 
 ### How to Build the Application 
 1. Check out the project : `git clone https://github.com/lucrussell/fibserver`
-1. Run `mvn spring-boot:run` (or run src/main/java/com.mycompany.myapp.Application.java` in your IDE)
+1. Run `mvn spring-boot:run` (or run `src/main/java/com/mycompany/myapp/Application.java` in your IDE)
 1. Browse to [http://localhost:8080](http://localhost:8080)
 
 ### How To Deploy to Cloud Foundry
