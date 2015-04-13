@@ -40,6 +40,14 @@ It may be useful to check the performance statistics for services in production.
 ![alt text](https://github.com/lucrussell/fibserver/blob/master/doc-images/statistics.png)
 View the Metrics screen [here](http://fibserver.cfapps.io/#/metrics).
 
+### How To Manage the Application on Cloud Foundry
+The application is deployed to the EMC Pivotal Cloud Foundry where it can be managed, e.g. 
+* View the logs
+* Scale the application by adjusting number of instances
+* Adjust memory available to the instances
+
+![alt text](https://github.com/lucrussell/fibserver/blob/master/doc-images/cloudfoundry.png)
+
 ## Developer Documentation
 ### Install Prerequisites
 These instructions apply to OSX 10.8.2.
@@ -62,14 +70,6 @@ These instructions apply to OSX 10.8.2.
 1. Create an account on Pivotal Cloud Foundry 
 1. Install the cf CLI [here](http://docs.cloudfoundry.org/devguide/installcf/install-go-cli.html)
 1. Run `yo jhipster:cloudfoundry`
-
-### How To Manage the Application on Cloud Foundry
-The application is deployed to the EMC Pivotal Cloud Foundry where it can be managed, e.g. 
-* View the logs
-* Scale the application by adjusting number of instances
-* Adjust memory available to the instances
-
-![alt text](https://github.com/lucrussell/fibserver/blob/master/doc-images/cloudfoundry.png)
 
 ### Development Notes
 
