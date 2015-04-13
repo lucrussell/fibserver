@@ -86,4 +86,4 @@ You can run `mvn:test` on the command line, or run all the tests under `src/main
 
 
 ## Troubleshooting
-Grunt tests might fail. Ensure they can run by setting up PHANTOMJS_BIN env var, see [here](http://stackoverflow.com/questions/28336214/no-binary-for-phantomjs-browser-on-your-platform-please-set-phantomjs-bin-en)
+Grunt tests might fail. Ensure they can run by setting up PHANTOMJS_BIN env var, see [here](http://stackoverflow.com/questions/28336214/no-binary-for-phantomjs-browser-on-your-platform-please-set-phantomjs-bin-en).
