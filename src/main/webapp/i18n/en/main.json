@@ -1,6 +1,6 @@
 {
     "main": {
-        "title": "Fibonacci Sequence Calculator",
+        "title": "Calculate Fibonacci Sequence",
         "subtitle": "",
         "logged": {
             "message": "You are logged in as user \"{{username}}\"."

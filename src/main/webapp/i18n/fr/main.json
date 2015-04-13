@@ -1,7 +1,7 @@
 {
     "main": {
-        "title": "Bienvenue, Java Hipster !",
-        "subtitle": "Ceci est votre page d'accueil",
+        "title": "Calculatrice Fibonacci Sequence",
+        "subtitle": "",
         "logged": {
             "message": "Vous êtes connecté en tant que \"{{username}}\"."
         },

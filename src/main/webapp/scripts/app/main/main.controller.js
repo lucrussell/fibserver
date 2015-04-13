@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('fibserverApp')
-    .controller('MainController', function ($http, $scope, Principal, FibService) {
+    .controller('MainController', function ($http, $scope, Principal) {
         Principal.identity().then(function(account) {
             $scope.account = account;
             $scope.isAuthenticated = Principal.isAuthenticated
@@ -20,7 +20,7 @@ angular.module('fibserverApp')
 	        		$scope.fibResult = data;
 	        	}).error(function(data, status, headers, config) {
 	        		$scope.status = status;
-	        		$scope.fibResult = data.message || "Request failed";
+	        		$scope.errorMsg = data.message || "Request failed";
         	});
         };
         function isInt(value) {
