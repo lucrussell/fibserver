@@ -8,29 +8,24 @@ fibserver is a simple REST server implemented with [Spring](http://spring.io/gui
 
 These technologies were chosen specifically for their focus on extensibility and maintainability in a production environment, the key requirement of the project. To learn more about the technology choices, please see [Technology Choices](https://github.com/lucrussell/fibserver/wiki#technology-choices).
 
-At the time of writing, there is an instance deployed [here](http://fibserver.cfapps.io/#/).
 
 ## Support Documentation
 The front end for the application looks like this:
 ![alt text](https://github.com/lucrussell/fibserver/blob/master/doc-images/home.png)
 Type a number between 0 and 200 in the input to print out a fibonacci sequence.
 
-See it in action [here](http://fibserver.cfapps.io).
 
 ### How To See Health Checks
 An authenticated user can see health checks for a running instance of the server.
 ![alt text](https://github.com/lucrussell/fibserver/blob/master/doc-images/health.png)
-See the health checks [here](http://fibserver.cfapps.io/#/health).
 
 ### How To Test API Methods
 Authenticated users can test calls to the REST services:
 ![alt text](https://github.com/lucrussell/fibserver/blob/master/doc-images/api2.png)
-See the API test pages [here](http://fibserver.cfapps.io/#/docs).
 
 ### How To Check Metrics
 An authenticated user can view metrics for a running instance of the server.
 ![alt text](https://github.com/lucrussell/fibserver/blob/master/doc-images/metrics.png)
-View the Metrics screen [here](http://fibserver.cfapps.io/#/metrics).
 
 This will also show number of server errors per HTTP request.
 
@@ -38,7 +33,6 @@ This will also show number of server errors per HTTP request.
 It may be useful to check the performance statistics for services in production. Authenticated users can check service time in milliseconds for `getFibonacciSequence` on the Metrics page, Services Statistics section.
 
 ![alt text](https://github.com/lucrussell/fibserver/blob/master/doc-images/statistics.png)
-View the Metrics screen [here](http://fibserver.cfapps.io/#/metrics).
 
 ### How To Manage the Application on Cloud Foundry
 The application is deployed to the EMC Pivotal Cloud Foundry where it can be managed, e.g. 
